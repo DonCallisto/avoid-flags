@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Domain\Article;
 
+use JetBrains\PhpStorm\Pure;
+
 enum Status
 {
     case DRAFT;
@@ -11,22 +13,22 @@ enum Status
     case REVIEWED;
     case PUBLISHED;
 
-    public function isDraft(): bool
+    #[Pure] public function isDraft(): bool
     {
         return $this == self::DRAFT;
     }
 
-    public function isReview(): bool
+    #[Pure] public function isReview(): bool
     {
         return $this == self::REVIEW;
     }
 
-    public function isReviewed(): bool
+    #[Pure] public function isReviewed(): bool
     {
         return $this == self::REVIEWED;
     }
 
-    public function isPublished(): bool
+    #[Pure] public function isPublished(): bool
     {
         return $this == self::PUBLISHED;
     }
