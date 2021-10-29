@@ -10,4 +10,14 @@ class User
     {
 
     }
+
+    public function getUsername(): string
+    {
+        return $this->username;
+    }
+
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
 }
